@@ -1,0 +1,37 @@
+<div class="styleguide dispacther-page-processTestInfo">
+		<div class="page group">
+		<blockquote>
+			<h2 class="sectionedit1" >关于流程测试</h2>
+		</blockquote>
+		
+
+		<div class="note note-info">
+            <h4 class="block">流程测试是什么？</h4>
+            <p>是模拟用户操作来进行测试，流程测试过程中如果某个节点出现问题就会报错，方便开发人员及时发现流程上存在的问题。</p>
+        </div>
+
+        <div class="note note-success">
+            <h4 class="block">为什么要做流程测试</h4>
+			<div class="level3">
+				<p style="margin-top:20px">1.为什么不做性能测试和界面回归测试</p>
+				<p>因为是后台系统，在加上只有PC端，在wifi环境下操作，所以性能问题不是最大的瓶颈，界面上的回归测试，也是能够显而易见，且不是高优先级的问题，所以性能测试和界面回归测试在本例中暂时不考虑</p>
+
+				<p style="margin-top:15px">2.为什么不做单测</p>
+				<p>首先新广告系统是在组件的基础上开发的，在TDD开发模式下，由开发人员编写单测是必要的，但是目前开发人员吃紧，每开发一个组件或者接口就要写单测，这样会增大开发人员开发量。并且新广告后台开发是基于组件，在组件级别做单测即可。</p>
+
+				<p style="margin-top:15px">3.为什么是流程测试</p>
+				<ul>
+					<li class="level1"><div class="li">主要是流程上影响的稳定问题</div></li>
+					<p>广告系统的不稳定性目前主要体现在运营同学在配置广告时遇到的影响其配置流程的问题，目前大部分问题都处于收敛的状态，但是如果新开发功能，还无法保证对于之前的功能不造成影响。</p>
+
+					<li class="level1"><div class="li">case 的编写和维护有利于帮助理解业务</div></li>
+
+					<li class="level1"><div class="li">case 流程相似，编写case成本会越来越小</div></li>
+					<p>不同于单测，每次写的单测可能是全新，而针对于新广告系统的流程测试，大部分流程都是一致，编写新的单侧，只需要修改之前的case即可；</p>
+				</ul>
+
+			</div>
+        </div>
+ 
+    </div>
+</div>

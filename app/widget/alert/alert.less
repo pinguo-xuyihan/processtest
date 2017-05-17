@@ -1,0 +1,33 @@
+.dispacther-widget-alert {
+    .alert-wrapper{
+
+    	width: 320px;
+	    margin: 0 auto;
+	    position: absolute;
+	    top: -51px;
+	    left: 50%;
+	    margin-left: -57px;
+	    z-index: 11111;
+	    animation:myTop 5s ;
+		-webkit-animation:myTop 5s;
+    }
+
+}
+
+@keyframes myTop
+{
+	0% { transform : translateY(0px) }
+	20% { transform : translateY(100px) }
+	60% { transform : translateY(100px) }
+	80% { transform : translateY(0px) }
+	100% { transform : translateY(-51px) }
+}
+
+@-webkit-keyframes myTop /*Safari and Chrome*/
+{
+	0% { transform : translateY(0px) }
+	20% { transform : translateY(51px) }
+	60% { transform : translateY(51px) }
+	80% { transform : translateY(0px) }
+	100% { transform : translateY(-51px) }
+}

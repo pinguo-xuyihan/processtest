@@ -1,0 +1,50 @@
+<div class="styleguide dispacther-page-caseStandard">
+	<div class="page group">
+		<blockquote>
+			<h2 class="sectionedit1" >流程测试case编写规范</h2>
+		</blockquote>
+		
+		<div class="level2">
+			<p>
+			目前流程测试基于phantomjs和casper来做；在书写case的时候需要按照一定的规范来书写；这样能方便case的维护和编写；
+			</p>
+		</div>
+		
+
+		<div class="note note-info">
+            <h4 class="block">数字列表项目需要遵循的测试框架规范</h4>
+            <p>(1) 如果需要添加cookie，在openURl之前使用addCookie添加 </p>
+			<p>(2) 使用casper.test，在test开始时写清楚断言个数，方便管理</p>
+			<p>(3) 对于异步渲染的dom，要采用wait机制，确定元素渲染完成之后再进行后续的断言；</p>
+
+			<p>(4) 赋值给获取的元素赋值是流程测试中必须的步骤，针对各种元素有不同的赋值操作</p>
+			<ul>
+				<li class="level1"><div class="li"> input 元素</div></li>
+			</ul>
+
+			<p>input使用sendKeys方法来进行赋值。</p>
+			<ul>
+				<li class="level1"><div class="li"> select 元素</div></li>
+			</ul>
+			<p>按照点击步骤，模拟点击select要选中的元素；</p>
+			<p>(5) 需要结构化输出的数据结构利用utils中的dump输出</p>
+			<p>(6) 判断元素是否存在；</p>
+			<p>判断元素使用casper中的标准方法assertExists</p>
+        </div>
+
+        <div class="note note-success">
+            <h4 class="block">结合业务的编写规范</h4>
+			<div class="level3">
+				<p>(1)新广告系统很多渲染是异步的，需要控制好操作顺序，异步的过程使用wait机制，然后在then中获取真实元素之后执行后面的步骤</p>
+			</div>
+        </div>
+
+        <div class="note note-warning">
+            <h4 class="block">case覆盖率和复杂度</h4>
+			<p>(1) 如果一个case的路径已经很长了， 就不要在横向再拓展，即路径很长时候，再选择多语言就没有必要；如现在新广告系统，如果路径在15以上,就算长</p>
+			<p>(2) case和case之间一定要最大程度的覆盖测试点</p>
+			<p>(3) case要根据业务上重点和难点，加重case中测试改点的重复率</p>
+        </div>
+ 
+    </div>
+</div>

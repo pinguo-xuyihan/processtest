@@ -1,0 +1,132 @@
+body{
+	background-color : #fff;
+}
+
+.dispacther-page-startCasePage{
+
+	.dialog-cover{	
+		display: block;
+	    padding-right: 15px;
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0,0,0,.7);
+	    z-index: 10;
+	}
+	.start-wrapper{
+		background:  #d1e3e9 ;
+		width : 100% ;
+		height: 240px;
+		.opt-wrapper{
+			position:absolute;
+			top : 10px;
+			width : 80% ;
+			margin:0 auto;
+			left : 10%;
+
+			display :flex;
+			.logo-caca{
+				width: 311px ;
+				height :289px;
+				background: url('../../resource/images/caca.png') 0 0 no-repeat;
+				background-size: 161px 192px;
+				margin-top: 14px;
+
+				animation: myjump 1s infinite;
+			}
+			.case-title {
+				color: #666;
+
+			    font-family: 'Vrinda','Segoe UI','Microsoft Jhenghei','微软雅黑',tahoma,'Hiragino Sans GB W3';
+			    -webkit-font-smoothing: antialiased;
+			    font-weight: normal;
+			    font-size: 45px;
+			    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+			    margin-bottom: 30px;
+    			-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.8)), color-stop(40%, rgba(255, 255, 255, .4)), color-stop(100%, #000000));
+			    text-decoration: none;
+			}
+		}
+
+		.process-wrapper{
+			background : -webkit-linear-gradient(top, #dcebf1 0%, #fafcfd 30%); 
+			height: 100% ;
+			width : 100%;
+			margin-top: -273px;
+			padding-top : 30px ;
+
+			.case-list{
+				background : #f5f3f3;;;
+				width :80% ;
+
+				margin : 0 auto ;
+				list-style:none;
+				padding-top : 30px ;
+				border: 1px solid  #d4d1d1;
+				padding-left : 0px ;
+				.case-item{
+					display :flex;
+					border: 1px solid  #d4d1d1;
+					width:95%;
+					margin: 0 auto;
+					margin-bottom : 20px;
+					background:#d7e5ec;
+					padding-top : 10px;
+					padding-bottom : 10px;
+					border-radius: 3px;
+					.btn-group{
+						margin-left : 30px
+					}
+					.case-item-title{
+						margin-left : 20px ;
+						font-weight : bold;
+						width : 100px;
+						line-height: 34px;
+					}
+					.my-process {
+						margin-left : 30px;
+						margin-top: 7px;
+					}
+					.case-item-detail{
+						margin-left : 30px ;
+					}
+					button.btn{
+						margin-left : 10px ;
+					}
+				}
+			}
+
+			.back-caca{
+				width: 380px ;
+				height :500px;
+				background: url('../../resource/images/caca.png') 0 0 no-repeat;
+				background-size : 400px 500px;
+				margin-top: 54px;
+			    transform: rotate(30deg);
+			    position: absolute;
+			    top: 450px;
+			    right: 60px;
+			    z-index: 2;
+			}
+		}
+	}
+
+}
+
+@keyframes myjump
+{
+    0% { transform : rotate(0deg) }
+    30% { transform : translateY(30deg) }
+    60% { transform : translateY(0deg) }
+    90% { transform : translateY(-30deg) }
+    100% { transform : translateY(0px) }
+}
+
+@-webkit-keyframes myjump /*Safari and Chrome*/
+{
+    0% { transform : rotate(0deg) }
+    30% { transform : translateY(30deg) }
+    60% { transform : translateY(0deg) }
+    90% { transform : translateY(-30deg) }
+    100% { transform : translateY(0px) }
+}

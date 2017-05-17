@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuites time="2.991"><testsuite name="v8首页Banner新增P1-case，测试重点：banner全操作" tests="10" failures="9" errors="0" time="2.991" timestamp="2017-05-12T12:26:39.936Z" package="bannerAddP1"><testcase name="左侧菜单加载完成" classname="bannerAddP1" time="1.536"/><testcase name="标题已填写" classname="bannerAddP1" time="0.02"><failure type="assertEquals"><![CDATA[标题已填写]]></failure></testcase><testcase name="多语言数据已加载完成" classname="bannerAddP1" time="0.02"><failure type="assertExists"><![CDATA[多语言数据已加载完成]]></failure></testcase><testcase name="语言面板已出现" classname="bannerAddP1" time="0.02"><failure type="assertExists"><![CDATA[语言面板已出现]]></failure></testcase><testcase name="背景图片已上传" classname="bannerAddP1" time="0.02"><failure type="assertExists"><![CDATA[背景图片已上传]]></failure></testcase><testcase name="Cannot dispatch mousedown event on nonexistent selector: #tagDialog .modal-body .tag-panel:nth-of-type(1) .tag-text" classname="bannerAddP1" time="0.021"><error type="object"><![CDATA[mouseEvent@phantomjs://platform/casper.js:1406:105
+click@phantomjs://platform/casper.js:472:34
+phantomjs://code/bannerAddP1.js:178:17
+runStep@phantomjs://platform/casper.js:1615:31
+checkStep@phantomjs://platform/casper.js:406:28]]></error><failure type="uncaughtError"><![CDATA[Cannot dispatch mousedown event on nonexistent selector: #tagDialog .modal-body .tag-panel:nth-of-type(1) .tag-text]]></failure></testcase><testcase name="Cannot dispatch mousedown event on nonexistent selector: #channelDialog .modal-body .multiselect-container&gt;li:nth-of-type(2) label" classname="bannerAddP1" time="0.046"><error type="object"><![CDATA[mouseEvent@phantomjs://platform/casper.js:1406:105
+click@phantomjs://platform/casper.js:472:34
+phantomjs://code/bannerAddP1.js:198:17
+runStep@phantomjs://platform/casper.js:1615:31
+checkStep@phantomjs://platform/casper.js:406:28]]></error><failure type="uncaughtError"><![CDATA[Cannot dispatch mousedown event on nonexistent selector: #channelDialog .modal-body .multiselect-container>li:nth-of-type(2) label]]></failure></testcase><testcase name="Cannot dispatch mousedown event on nonexistent selector: .tab-panel li.item-li:nth-of-type(6) .text-content &gt; div:nth-of-type(2) button" classname="bannerAddP1" time="0.003"><error type="object"><![CDATA[mouseEvent@phantomjs://platform/casper.js:1406:105
+click@phantomjs://platform/casper.js:472:34
+phantomjs://code/bannerAddP1.js:208:17
+runStep@phantomjs://platform/casper.js:1615:31
+checkStep@phantomjs://platform/casper.js:406:28]]></error><failure type="uncaughtError"><![CDATA[Cannot dispatch mousedown event on nonexistent selector: .tab-panel li.item-li:nth-of-type(6) .text-content > div:nth-of-type(2) button]]></failure></testcase><testcase name="Cannot get informations from input[data-key=&quot;activeArea&quot;]: element not found." classname="bannerAddP1" time="0.019"><error type="object"><![CDATA[getElementInfo@phantomjs://platform/casper.js:1093:98
+sendKeys@phantomjs://platform/casper.js:1651:40
+phantomjs://code/bannerAddP1.js:214:20
+runStep@phantomjs://platform/casper.js:1615:31
+checkStep@phantomjs://platform/casper.js:406:28]]></error><failure type="uncaughtError"><![CDATA[Cannot get informations from input[data-key="activeArea"]: element not found.]]></failure></testcase><testcase name="提交成功" classname="bannerAddP1" time="1.286"><failure type="assertNotEquals"><![CDATA[提交成功]]></failure></testcase><system-out><![CDATA[]]></system-out></testsuite></testsuites>
