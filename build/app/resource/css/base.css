@@ -1,0 +1,82 @@
+html, body, .root {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+.title-wrapper{
+	left: 50%;
+	top : 50%;
+	position: absolute;
+	transform: translate(-50%, -100%)
+}
+.index-cover{
+	height : 100%;
+	width : 100%;
+	background: #364150;
+	position: absolute;
+	z-index: 9999;
+
+}
+
+.cover-title{
+
+	color: #fff;
+	font-size : 60px;
+	height: 80px;
+	line-height: 60px;
+	font-weight: 600;
+	width: 700px;
+	top: 60px;
+	left: 0px;
+	position:absolute;
+	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.8)), color-stop(40%,rgba(255,255,255,.5)), color-stop(100%,rgba(0,0,0,1)));
+	
+	
+	animation:mysecond 1s linear;
+	-moz-animation:mysecond 1s linear; /* Firefox */
+	-webkit-animation:mysecond 1s linear; /* Safari and Chrome */
+	-o-animation:mysecond 1s linear; /* Opera */
+	
+	animation-delay: 3s;
+    animation-fill-mode: forwards;
+	
+}
+
+
+.cover-time{
+	color: #8c8484;
+	position: relative;
+	top : 100px;
+	text-align: center;
+
+	animation:myfirst 2s;
+	-moz-animation:myfirst 2s; /* Firefox */
+	-webkit-animation:myfirst 2s; /* Safari and Chrome */
+	-o-animation:myfirst 2s; /* Opera */
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes myfirst
+{
+	from {top:200px;}
+	to {top:90px;}
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	from {top:200px;}
+	to {top:90px;}
+}
+
+@keyframes mysecond
+{
+
+	0%   {top:60px   ;left:0px   ; font-size: 60px; width: 700px;}
+	100% {top:-340px;left:-460px; font-size: 18px; width: 300px;}
+}
+@-webkit-keyframes mysecond /* Safari and Chrome */
+{
+	0%   {top:60px   ;left:0px   ; font-size: 60px; width: 700px;}
+	100% {top:-340px;left:-460px; font-size: 18px; width: 300px;}
+}
