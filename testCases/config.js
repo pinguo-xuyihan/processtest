@@ -1,0 +1,5 @@
+module.exports = {
+	auth: 'MmlNRGFrcWxMVXRmeStiaVlFRG4wUDN1aXBWc2tlSXRkQVdLdEU1TjlCRHkxWjJQVmNpRCtWSG1HWlhSalErN3J0dnFLMFFmZUxNTk1GRUlKWUMrOWt3SVRtSWFQOUxlYXVwblRSMUora3pSZHdyZCt3SzlTTXJSQXBTMWN5VG9TSk5GQ0dacGhwTWJpYmNHdG56b0dBZ1Z5a2loTXpoQXpNazdZQW94YW5VPQ%3D%3D',
+	captureRoot: '/Users/yaweiyihan/Desktop/code/phantom/capture/'
+
+}
