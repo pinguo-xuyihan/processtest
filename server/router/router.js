@@ -2,7 +2,7 @@ var express = require('express');
 var parseXml = require('../util/parsexml');
 var fs = require('fs');
 var child_process = require('child_process');
-var CaseConfig = require('../config/const.js');
+var CaseConfig = require('../config/const.js').CaseConfig;
 
 // get an instance of the express Router
 var router = express.Router();

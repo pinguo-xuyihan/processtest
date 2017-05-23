@@ -15,6 +15,9 @@ module.exports = {
  		this.bind();
  	},
  	init: function () {
+ 		this.caseManager = new CaseManager();
+ 		var caseManager = this.caseManager;
+ 		console.log('dd', caseManager);
  		var caseList = [
  			'bannerAddP1',
  			'bannerEditP1',
@@ -35,7 +38,6 @@ module.exports = {
  			'fpEntry5EditP1',
  			'fpEntry5CopyP1',
  		];
- 		var caseManager = new CaseManager();
  		caseList.forEach(function (item) {		
 	 		caseManager.addItem(new CaseItem({
 	 			id: item
@@ -45,6 +47,7 @@ module.exports = {
  		caseManager.render();
  	},
  	bind: function () {
+ 		var caseManager = this.caseManager;
 
  		//bind Dom Event
  		$('.get-info').on('click',function(){
@@ -56,59 +59,19 @@ module.exports = {
  				function (data) {
  					$(".dialog-cover").css('display' , 'block');
  					Dialog.render();
- 					var str = '';
+ 					var tpl = ['<ol>'];
  					for(var i = 0 ; i < data.caseInfo.length ; i++){
- 						str += data.caseInfo[i] + '->'
+ 						tpl.push('<li>' + data.caseInfo[i] +'</li>');
  					}
- 					$(".bootbox-body").text(str);					
+ 					tpl.push('</ol>');
+ 					$(".bootbox-body").html(tpl.join(''));					
  				}
  			);
-		})
+		});
 
-		return;
 
  		$('.start-case-btn').on('click', function () {
- 			var url = $('.case-url').val();
- 			if (!url) {
- 				alert('请输入网址');
- 				return;
- 			}
- 			$('.case1-progressbar').width('10%');
- 			$.post(
- 				'http://127.0.0.1:8081/api/start-case',
- 				{
- 					url: url
- 				},
- 				function (data) {
- 					$('.case1-progressbar').width('30%');
-			 		interval = setInterval(function () {
-			 			$.get(
-			 				'http://127.0.0.1:8081/api/case-detail',
-			 				{},
-			 				function (data) {
-			 					$('.case1-progressbar').width('100%');
-			 					$('.case1-detail-btn').removeClass('disabled');
-			 					$('.case1-detail-btn').on('click', function () {
-			 						location.hash = '#casedetail';
-			 					});
-			 					clearInterval(interval);
-			 					console.log(data);
-			 					var failtures = data.filter(function (item) {
-			 						return item.failure !== null;
-			 					});
-			 					if (failtures.length) {
-			 						$('.case1-item').append($('<label class="btn red btn-outline btn-circle btn-sm active">执行失败</label>'));
-			 					} else {
-			 						$('.case1-item').append($('<label class="btn green btn-outline btn-circle btn-sm active">执行成功</label>'));
-			 					}
-			 				}
-			 			);
-			 		}, 2000);
- 				}
- 			);
+ 			caseManager.startQuene();
  		});
-
-
-
  	},
 };

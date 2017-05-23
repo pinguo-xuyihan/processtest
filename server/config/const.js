@@ -177,4 +177,8 @@ var CaseConfig = {
 	}
 };
 
-module.exports = CaseConfig;
+module.exports = {
+	CaseConfig: CaseConfig,
+	shRoot: shRoot,
+	outputRoot: outputRoot
+};

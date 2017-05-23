@@ -16,7 +16,7 @@ function CaseItem (opts) {
 		'		<button type="button" class="btn  yellow-crusta get-info" data-key="'+this.opts.id+'">case简介</button>',
 		'		<button type="button" class="btn  green-meadow start-btn">启动</button>',
 		'		<button type="button" class="btn purple-plum disabled detail-btn">执行详情</button>',
-		'		<label class="btn btn-outline btn-circle btn-sm active state"></label>',
+		'		<label class="btn btn-outline btn-circle btn-sm active state" ></label>',
 		'   </div>',
 		'</li>'
 	];
@@ -39,16 +39,16 @@ CaseItem.prototype.bind = function () {
 	});
 }
 
-CaseItem.prototype.startCase = function () {
+CaseItem.prototype.startCase = function (type) {
 	var me = this;
 	$.get(
-		'http://127.0.0.1:8001/api/start-case/' + me.opts.id,
+		'http://127.0.0.1:8081/api/start-case/' + me.opts.id,
 		{},
 		function (data) {
 			$('.progress-bar', me.dom).width('30%');
-	 		me.interval = setInterval(function () {
+	 		me.interval = setInterval(function (){
 	 			$.get(
-	 				'http://127.0.0.1:8001/api/case-detail/' + me.opts.id,
+	 				'http://127.0.0.1:8081/api/case-detail/' + me.opts.id + '?r=' + Math.random(),
 	 				{},
 	 				function (data) {
 	 					$('.progress-bar', me.dom).width('100%');
@@ -68,6 +68,12 @@ CaseItem.prototype.startCase = function () {
 	 						$('.state', me.dom).text('执行成功');
 	 						$('.state', me.dom).addClass('green');
 	 					}
+
+	 					if(type == 'quene'){
+	 						$('body').trigger('case-ready');	 						
+	 					}
+
+
 	 				}
 	 			);
 	 		}, 5000);

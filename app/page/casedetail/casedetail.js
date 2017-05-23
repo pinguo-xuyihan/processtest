@@ -19,8 +19,9 @@ module.exports = {
  			item = item.split('=');
  			query[item[0]] = item[1];
  		});
+ 		$('.capture').attr('src', 'http://127.0.0.1:8081/static/' + query.id + '.png');
 	    $.ajax({
-	        url: 'http://127.0.0.1:8001/api/case-detail/' + query.id,
+	        url: 'http://127.0.0.1:8081/api/case-detail/' + query.id,
 	        type: 'GET',
 	        timeout : 5000,
 	        dataType: 'json',

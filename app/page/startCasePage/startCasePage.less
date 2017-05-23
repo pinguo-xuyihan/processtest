@@ -2,14 +2,34 @@ body{
 	background-color : #fff;
 }
 
+
+@keyframes move {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(-50px); }
+	50% { transform: translateX(0); }
+	75% { transform: translateX(50px); }
+	100% { transform: translateX(0); }
+}
+
 .dispacther-page-startCasePage{
+
+	.cloud-bg {
+		animation: move 15s infinite linear;
+		-webkit-animation: move 15s infinite linear;
+	}
+
+	.state{
+		margin-left : 15px;
+	}
 
 	.dialog-cover{	
 		display: block;
 	    padding-right: 15px;
-	    position: absolute;
+	    position: fixed;
 	    width: 100%;
 	    height: 100%;
+	    left: 0;
+	    top: 0;
 	    background: rgba(0,0,0,.7);
 	    z-index: 10;
 	}
@@ -56,7 +76,7 @@ body{
 			padding-top : 30px ;
 
 			.case-list{
-				background : #f5f3f3;;;
+				background : rgba(245, 243, 243, 0);
 				width :80% ;
 
 				margin : 0 auto ;
