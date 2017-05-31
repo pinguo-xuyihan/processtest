@@ -42,7 +42,7 @@ phantom.addCookie({
     'path'   : '/'
 });
 
-casper.test.begin('v8首页Banner新增P1-case，测试重点：banner全操作', 9, function suite(test) {
+casper.test.begin('v8首页Banner新增P1-case，测试重点：banner全操作', 10, function suite(test) {
 
   casper.start('http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html', function() {
       

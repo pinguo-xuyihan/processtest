@@ -64,12 +64,10 @@ casper.test.begin('列表8.0广告', 7 , function suite(test) {
         if (!list) {
             this.die('unable to get list');
         }
-        if(list[0].title == 'casperTestP6'){
+        if(list[0].title == 'feedAddP1'){
 
             url = "http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html#/page_fpV8FpFeedV8?name=fpFeedV8&value=feed配置&type=3&appName=camera360&editType=edit&systemName=dispatcherSystem&&_k=7s0yer&groupId=" + list[0].group_id;
             
-
-            this.echo(url);
             casper.thenOpen(url, function() {
         
                 this.waitForSelector('.menu-item');
@@ -78,7 +76,6 @@ casper.test.begin('列表8.0广告', 7 , function suite(test) {
             casper.then(function() {
               
                 test.assertExists('.menu-item', '左侧菜单加载完成');
-                this.capture('xuxu.png');
                 this.waitForSelector('div[data-key="contImg"] img');
             
             })
@@ -117,7 +114,7 @@ casper.test.begin('列表8.0广告', 7 , function suite(test) {
 
                  
 
-                test.assertEquals(title, 'casperTestP6', 'title一致');
+                test.assertEquals(title, 'feedAddP1', 'title一致');
 
                 //test.assertEquals(publisher, '@CAMERA360@Camera360 '  , '发布账号主体');
 

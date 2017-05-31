@@ -51,10 +51,7 @@ casper.test.begin('v8banner process test', 4, function suite(test) {
       this.click(".menu li:nth-of-type(4) a");
       this.wait(5000);
 
-
-      
   }).then(function(){
-
 
       //-------------设置标题名------------·---
       this.sendKeys('input[data-key="title"]', 'casperTestP9', { reset: true});
@@ -73,6 +70,7 @@ casper.test.begin('v8banner process test', 4, function suite(test) {
       //-------------选择上架时间--------------
       var date = dateFormat(new Date() , 'isoDate' );
       var time = dateFormat(new Date() , 'isoTime' );
+      
       var startTime = date + " " + time ;
 
       casper.evaluate(function () {
@@ -96,7 +94,6 @@ casper.test.begin('v8banner process test', 4, function suite(test) {
       
       //----------填写有效内显示次数--------------
       this.sendKeys('input[data-key="displayCount"]', '3' , { reset: true });
-      
 
       this.waitForSelector('.tab-main'); 
  
@@ -119,7 +116,6 @@ casper.test.begin('v8banner process test', 4, function suite(test) {
 
   casper.then(function(){
 
-
       //----------点击测试发布按钮-----------
       this.click('a[data-key="v8banner"]');
       //等待弹框出现
@@ -136,8 +132,10 @@ casper.test.begin('v8banner process test', 4, function suite(test) {
   })
 
   casper.run(function() {
-    test.done();
+
+      test.done();
       test.renderResults(true, 0, 'inAppAddP1.xml');
+
   });
 });
 

@@ -1,5 +1,5 @@
-var shRoot = '/Users/yaweiyihan/Desktop/code/casePlatform/server/sh/';
-var outputRoot = '/Users/yaweiyihan/Desktop/code/phantom/';
+var shRoot = '/Users/yaweiyihan/Desktop/code/processtest/server/sh/';
+var outputRoot = '/Users/yaweiyihan/Desktop/code/processtest/testCases/';
 var CaseConfig = {
 	bannerAddP1: {
 		shPath: shRoot + 'bannerAddP1.sh',

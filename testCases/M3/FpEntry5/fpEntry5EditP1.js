@@ -63,7 +63,7 @@ casper.test.begin('列表8.0广告', 11 , function suite(test) {
         if (!list) {
             this.die('unable to get list');
         }
-        if(list[0].title == 'casperTestP10'){
+        if(list[0].title == 'fpEntry5AddP1'){
 
             url = "http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html#/page_v8CommunityEditionFpEntry5?name=v8CommunityEditionFpEntry5&value=5号位&type=1&appName=camera360&editType=edit&systemName=dispatcherSystem&&_k=7s0yer&groupId=" + list[0].group_id;
             
@@ -102,7 +102,7 @@ casper.test.begin('列表8.0广告', 11 , function suite(test) {
                 })
 
 
-                test.assertEquals(title, 'casperTestP10', 'title一致');
+                test.assertEquals(title, 'fpEntry5AddP1', 'title一致');
                 test.assertEquals(priority, '1', '优先级一致');
 
                 test.assertEquals(textContent, '硬糖贴纸' , '5号位文案内容一致');

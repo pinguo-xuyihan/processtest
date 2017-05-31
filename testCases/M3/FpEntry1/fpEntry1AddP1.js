@@ -33,7 +33,7 @@ phantom.addCookie({
 });
 
 // use casper testing 
-casper.test.begin('v8banner process test', 10, function suite(test) {
+casper.test.begin('v8banner process test', 5, function suite(test) {
 
   casper.start('http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html', function() {
       // Wait for the page to be loaded
@@ -112,56 +112,21 @@ casper.test.begin('v8banner process test', 10, function suite(test) {
       //---------------设置Icon---------------
       this.click('.tab-panel .previewView .clearfix:nth-of-type(3) .l li:nth-of-type(2) a');
 
-
-  });
-
-  casper.then(function(){
-
-      test.assertExists('div[data-key="iconPng"] img', 'icon图已上传');
-
-      casper.page.uploadFile('#iconGifzh_cn', './90_90.png');
-      this.waitForSelector('div[data-key="iconGif"] img');
-  });
-
-
-  casper.then(function(){
-
-      //---------------设置背景图--------------
-      test.assertExists('div[data-key="iconGif"] img', 'gifIcon已上传');
-
       this.click('.tab-panel .previewView .clearfix:nth-of-type(4) .l li:nth-of-type(2) a');
-      casper.page.uploadFile('#backBigzh_cn', './big.png');
-      this.waitForSelector('div[data-key="backBig"] img');
 
   });
 
-  casper.then(function(){
-
-      test.assertExists('div[data-key="backBig"] img', '大背景图已上传');
-      casper.page.uploadFile('#backMiddlezh_cn', './middle.png');
-      this.waitForSelector('div[data-key="backMiddle"] img');
-  });
-
-  casper.then(function(){
-
-      test.assertExists('div[data-key="backMiddle"] img', '中号背景图已上传');
-      casper.page.uploadFile('#backSmallzh_cn', './small.png');
-      this.waitForSelector('div[data-key="backSmall"] img');
-
-  });
 
   casper.then(function(){
       
-      test.assertExists('div[data-key="backSmall"] img', '小号背景图已上传');
-
-      this.sendKeys('input[data-key="h5link"]', 'www.baidu.com', { reset: true});
-    
       //----------点击测试发布按钮-----------
       this.click('a[data-key="v8banner"]');
       //等待弹框出现
       this.waitForSelector('#alertDialog.in');     
 
   });
+
+  
 
   casper.then(function(){
 

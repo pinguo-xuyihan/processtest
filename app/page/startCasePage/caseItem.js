@@ -61,6 +61,8 @@ CaseItem.prototype.startCase = function (type) {
 	 					var failtures = data.filter(function (item) {
 	 						return item.failure !== null;
 	 					});
+
+	 					alert(failtures.length);
 	 					if (failtures.length) {
 	 						$('.state', me.dom).text('执行失败');
 	 						$('.state', me.dom).addClass('red');
@@ -76,7 +78,7 @@ CaseItem.prototype.startCase = function (type) {
 
 	 				}
 	 			);
-	 		}, 5000);
+	 		}, 10000);
 		}
 	);
 }

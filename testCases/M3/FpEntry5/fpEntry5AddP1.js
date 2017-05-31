@@ -59,7 +59,7 @@ casper.test.begin('v8banner process test', 10, function suite(test) {
     
 
     //-------------设置标题名------------·---
-    this.sendKeys('input[data-key="title"]', 'casperTestP10', { reset: true});
+    this.sendKeys('input[data-key="title"]', 'fpEntry5AddP1', { reset: true});
     this.waitForSelector('.tablee li.item-li:nth-of-type(3) .text-content .multiselect-container li:nth-of-type(2) label');
       
   
