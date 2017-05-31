@@ -1,3 +1,6 @@
+
+rm -rf ./build/
+
 webpack --config webpack.config.js
 
 mkdir ./build/app
