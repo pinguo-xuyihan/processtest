@@ -36,12 +36,12 @@ phantom.addCookie({
 
 casper.test.begin('列表8.0广告', 9 , function suite(test) {
 
-    casper.start('http://godman-xuyihan.camera360.com/operating_cms/#page_historicalRecordsSearchV8?name=historicalRecordsSearchV8&value=8.0广告列表&type=20&appName=camera360&systemName=dispatcherSystem', function() {
+    casper.start('http://godman-qa.camera360.com/operating_cms/#page_historicalRecordsSearchV8?name=historicalRecordsSearchV8&value=8.0广告列表&type=20&appName=camera360&systemName=dispatcherSystem', function() {
         
         list = this.evaluate(function() {
             try {
                 return JSON.parse(__utils__.sendAJAX(
-                    'http://godman-xuyihan.camera360.com/god/transmit',
+                    'http://godman-qa.camera360.com/god/transmit',
                     'POST',
                     {
                         transUrl: 'http://dispatchertest-dev.camera360.com/cms/adv/v8List',
@@ -63,7 +63,7 @@ casper.test.begin('列表8.0广告', 9 , function suite(test) {
             this.die('unable to get list');
         }
         if(list[0].title == 'casperTestP5'){
-            url = "http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html#/page_fpV8FpBannerV8?name=fpBannerV8&value=首页Banner&type=3&appName=camera360&editType=edit&systemName=dispatcherSystem&&_k=s6k1o4&groupId=" + list[0].group_id;
+            url = "http://godman-qa.camera360.com/operating_cms/operation/build/index.html#/page_fpV8FpBannerV8?name=fpBannerV8&value=首页Banner&type=3&appName=camera360&editType=edit&systemName=dispatcherSystem&&_k=s6k1o4&groupId=" + list[0].group_id;
         
             casper.thenOpen(url, function() {
         

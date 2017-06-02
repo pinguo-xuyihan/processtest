@@ -44,7 +44,7 @@ phantom.addCookie({
 
 casper.test.begin('v8首页Banner新增P1-case，测试重点：banner全操作', 10, function suite(test) {
 
-  casper.start('http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html', function() {
+  casper.start('http://godman-qa.camera360.com/operating_cms/operation/build/index.html', function() {
       
       //-----------检测左侧菜单是否加载完成-------------
       this.waitForSelector('.menu-item');

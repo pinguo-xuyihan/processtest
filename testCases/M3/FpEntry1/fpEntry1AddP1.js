@@ -35,7 +35,7 @@ phantom.addCookie({
 // use casper testing 
 casper.test.begin('v8banner process test', 5, function suite(test) {
 
-  casper.start('http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html', function() {
+  casper.start('http://godman-qa.camera360.com/operating_cms/operation/build/index.html', function() {
       // Wait for the page to be loaded
       this.waitForSelector('.menu-item');
  

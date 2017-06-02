@@ -38,12 +38,12 @@ phantom.addCookie({
 
 casper.test.begin('列表8.0广告', 7 , function suite(test) {
 
-    casper.start('http://godman-xuyihan.camera360.com/operating_cms/#page_historicalRecordsSearchV8?name=historicalRecordsSearchV8&value=8.0广告列表&type=20&appName=camera360&systemName=dispatcherSystem', function() {
+    casper.start('http://godman-qa.camera360.com/operating_cms/#page_historicalRecordsSearchV8?name=historicalRecordsSearchV8&value=8.0广告列表&type=20&appName=camera360&systemName=dispatcherSystem', function() {
         
         list = this.evaluate(function() {
             try {
                 return JSON.parse(__utils__.sendAJAX(
-                    'http://godman-xuyihan.camera360.com/god/transmit',
+                    'http://godman-qa.camera360.com/god/transmit',
                     'POST',
                     {
                         transUrl: 'http://dispatchertest-dev.camera360.com/cms/adv/v8List',
@@ -66,7 +66,7 @@ casper.test.begin('列表8.0广告', 7 , function suite(test) {
         }
         if(list[0].title == 'feedAddP1'){
 
-            url = "http://godman-xuyihan.camera360.com/operating_cms/operation/build/index.html#/page_fpV8FpFeedV8?name=fpFeedV8&value=feed配置&type=3&appName=camera360&editType=copy&systemName=dispatcherSystem&&_k=7s0yer&groupId=" + list[0].group_id;
+            url = "http://godman-qa.camera360.com/operating_cms/operation/build/index.html#/page_fpV8FpFeedV8?name=fpFeedV8&value=feed配置&type=3&appName=camera360&editType=copy&systemName=dispatcherSystem&&_k=7s0yer&groupId=" + list[0].group_id;
             
 
             this.echo(url);
