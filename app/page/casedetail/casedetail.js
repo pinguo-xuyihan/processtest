@@ -1,7 +1,7 @@
 var template = require('html-loader!./casedetail.html');
 require('./casedetail.less');
 
-var host = "http://112.124.5.195:8683";
+var host = "//112.124.5.195:8683";
 
 //var host = "http://127.0.0.1:8081"
 

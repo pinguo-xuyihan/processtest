@@ -843,7 +843,7 @@ module.exports = {
 var template = __webpack_require__(148);
 __webpack_require__(124);
 
-var host = "http://112.124.5.195:8683";
+var host = "//112.124.5.195:8683";
 
 //var host = "http://127.0.0.1:8081"
 
@@ -1190,7 +1190,7 @@ CaseItem.prototype.startCase = function (type) {
 
 
 	var me = this;
-	var host = "http://112.124.5.195:8683";
+	var host = "https://112.124.5.195:8683";
 
     //var host = "http://127.0.0.1:8081"
 	$.get(
@@ -1248,7 +1248,7 @@ var CaseItem = __webpack_require__(141);
 var CaseManager = __webpack_require__(96);
 var Dialog = __webpack_require__(145);
 
-var host = "http://112.124.5.195:8683";
+var host = "https://112.124.5.195:8683";
 
 //var host = "http://127.0.0.1:8081"
 
@@ -2049,7 +2049,7 @@ CaseItem.prototype.startCase = function (type) {
 
 
 	var me = this;
-	var host = "http://112.124.5.195:8683";
+	var host = "https://112.124.5.195:8683";
 
     //var host = "http://127.0.0.1:8081"
 	$.get(
@@ -2162,7 +2162,7 @@ module.exports = "<div class=\"styleguide dispacther-page-caseStandard\">\n\t<di
 /* 148 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"styleguide dispacther-page-casedetail\">\n\t<div class=\"row\" >\n\t\t<div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-12\">\n        <a class=\"dashboard-stat dashboard-stat-v2 blue\" href=\"#\">\n            <div class=\"visual\">\n                <i class=\"fa fa-comments\"></i>\n            </div>\n            <div class=\"details\">\n                <div class=\"number\">\n                    <span class=\"counterup case-total\" data-value=\"1349\">-</span>\n                </div>\n                <div class=\"desc\">断言总数</div>\n            </div>\n        </a>\n    </div>\n\n\t<div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-12\">\n        <a class=\"dashboard-stat dashboard-stat-v2 red\" href=\"#\">\n            <div class=\"visual\">\n                <i class=\"fa fa-bar-chart-o\"></i>\n            </div>\n            <div class=\"details\">\n           \t\t<div class=\"number\">\n                    <span class=\"counterup case-failture\" data-value=\"9\">-</span>\n                </div>\n                <div class=\"desc\"> 失败总数</div>\n            </div>\n        </a>\n    </div>\n\n    <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-12\">\n        <a class=\"dashboard-stat dashboard-stat-v2 green\" href=\"#\">\n            <div class=\"visual\">\n                <i class=\"fa fa-shopping-cart\"></i>\n            </div>\n            <div class=\"details\">\n                <div class=\"number\">\n                    <span class=\"counterup case-success\" data-value=\"1\">-</span>\n                </div>\n                <div class=\"desc\"> 成功总数 </div>\n            </div>\n        </a>\n    </div>\n\t</div>\n\n    <div class=\" case-list\">\n        <table class=\"table table-hover table-light\" style=\"margin-bottom:0px;\">\n            <thead>\n                <tr>\n                    <th> 断言编号</th>\n                    <th> 断言内容</th>\n                    <th> 执行耗时 </th>\n                    <th> 执行结果 </th>\n                    <th> 结果截图 </th>\n                </tr>\n            </thead>\n            <tbody>\n              \n            </tbody>\n        </table>\n    </div>\n\n    <img src=\"xxxHTMLLINKxxx0.20044391043484210.10955346864648163xxx\" alt=\"\" class=\"capture\">\n</div>";
+module.exports = "<div class=\"styleguide dispacther-page-casedetail\">\n\t<div class=\"row\" >\n\t\t<div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-12\">\n        <a class=\"dashboard-stat dashboard-stat-v2 blue\" href=\"#\">\n            <div class=\"visual\">\n                <i class=\"fa fa-comments\"></i>\n            </div>\n            <div class=\"details\">\n                <div class=\"number\">\n                    <span class=\"counterup case-total\" data-value=\"1349\">-</span>\n                </div>\n                <div class=\"desc\">断言总数</div>\n            </div>\n        </a>\n    </div>\n\n\t<div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-12\">\n        <a class=\"dashboard-stat dashboard-stat-v2 red\" href=\"#\">\n            <div class=\"visual\">\n                <i class=\"fa fa-bar-chart-o\"></i>\n            </div>\n            <div class=\"details\">\n           \t\t<div class=\"number\">\n                    <span class=\"counterup case-failture\" data-value=\"9\">-</span>\n                </div>\n                <div class=\"desc\"> 失败总数</div>\n            </div>\n        </a>\n    </div>\n\n    <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-12\">\n        <a class=\"dashboard-stat dashboard-stat-v2 green\" href=\"#\">\n            <div class=\"visual\">\n                <i class=\"fa fa-shopping-cart\"></i>\n            </div>\n            <div class=\"details\">\n                <div class=\"number\">\n                    <span class=\"counterup case-success\" data-value=\"1\">-</span>\n                </div>\n                <div class=\"desc\"> 成功总数 </div>\n            </div>\n        </a>\n    </div>\n\t</div>\n\n    <div class=\" case-list\">\n        <table class=\"table table-hover table-light\" style=\"margin-bottom:0px;\">\n            <thead>\n                <tr>\n                    <th> 断言编号</th>\n                    <th> 断言内容</th>\n                    <th> 执行耗时 </th>\n                    <th> 执行结果 </th>\n                    <th> 结果截图 </th>\n                </tr>\n            </thead>\n            <tbody>\n              \n            </tbody>\n        </table>\n    </div>\n\n    <img src=\"xxxHTMLLINKxxx0.9155805748887360.9902727375738323xxx\" alt=\"\" class=\"capture\">\n</div>";
 
 /***/ }),
 /* 149 */

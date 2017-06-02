@@ -43,7 +43,7 @@ CaseItem.prototype.startCase = function (type) {
 
 
 	var me = this;
-	var host = "http://112.124.5.195:8683";
+	var host = "https://112.124.5.195:8683";
 
     //var host = "http://127.0.0.1:8081"
 	$.get(
