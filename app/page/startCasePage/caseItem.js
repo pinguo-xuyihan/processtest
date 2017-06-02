@@ -40,15 +40,20 @@ CaseItem.prototype.bind = function () {
 }
 
 CaseItem.prototype.startCase = function (type) {
+
+
 	var me = this;
+	var host = "http://112.124.5.195:8683";
+
+    //var host = "http://127.0.0.1:8081"
 	$.get(
-		'http://127.0.0.1:8081/api/start-case/' + me.opts.id,
+		 host + '/api/start-case/' + me.opts.id,
 		{},
 		function (data) {
 			$('.progress-bar', me.dom).width('30%');
 	 		me.interval = setInterval(function (){
 	 			$.get(
-	 				'http://127.0.0.1:8081/api/case-detail/' + me.opts.id + '?r=' + Math.random(),
+	 				 host + '/api/case-detail/' + me.opts.id + '?r=' + Math.random(),
 	 				{},
 	 				function (data) {
 	 					$('.progress-bar', me.dom).width('100%');

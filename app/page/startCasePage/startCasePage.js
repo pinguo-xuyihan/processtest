@@ -5,6 +5,10 @@ var CaseItem = require('./caseitem');
 var CaseManager = require('./casemanager');
 var Dialog = require('Widget/dialog/dialog');
 
+var host = "http://112.124.5.195:8683";
+
+//var host = "http://127.0.0.1:8081"
+
 require('./startCasePage.less');
 
 module.exports = {
@@ -54,7 +58,7 @@ module.exports = {
 			
 			var id = $(this).attr('data-key');
 			$.get(
- 				'http://127.0.0.1:8081/api/case-info/'+ id,
+ 				host + '/api/case-info/'+ id,
 
  				function (data) {
  					$(".dialog-cover").css('display' , 'block');

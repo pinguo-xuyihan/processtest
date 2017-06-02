@@ -1,6 +1,10 @@
 var template = require('html-loader!./casedetail.html');
 require('./casedetail.less');
 
+var host = "http://112.124.5.195:8683";
+
+//var host = "http://127.0.0.1:8081"
+
 module.exports = {
  	render: function () {
  		$('.root').html(template);
@@ -19,9 +23,9 @@ module.exports = {
  			item = item.split('=');
  			query[item[0]] = item[1];
  		});
- 		$('.capture').attr('src', 'http://127.0.0.1:8081/static/' + query.id + '.png');
+ 		$('.capture').attr('src',  host + '/static/' + query.id + '.png');
 	    $.ajax({
-	        url: 'http://127.0.0.1:8081/api/case-detail/' + query.id,
+	        url:  host + '/api/case-detail/' + query.id,
 	        type: 'GET',
 	        timeout : 5000,
 	        dataType: 'json',
