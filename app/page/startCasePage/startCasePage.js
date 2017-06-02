@@ -5,7 +5,7 @@ var CaseItem = require('./caseitem');
 var CaseManager = require('./casemanager');
 var Dialog = require('Widget/dialog/dialog');
 
-var host = "https://112.124.5.195:8683";
+var host = "//112.124.5.195:8683";
 
 //var host = "http://127.0.0.1:8081"
 
